@@ -12,7 +12,6 @@ flavors = {"espresso": {"Water": 50,
                     "Milk": 100,
                     "Coffee": 24,}}
 
-# TODO: printing resource
 
 def M_resource(machine_money=0):
     i = 0
@@ -38,15 +37,6 @@ def process_coins():
     pennies = int(input("How many Pennies?: "))
     inserted_money = quarters * 0.25 + dimes * 0.1 + nickels * 0.05 + pennies * 0.01
     return round(inserted_money, 2)
-
-# def transaction_check (user_input,each_value, money):
-#     if user_input == "espresso":
-#         money -= each_value
-#     elif user_input == "latte":
-#         money -= each_value
-#     elif user_input == "cappuccino":
-#         money -= each_value
-#     return money
 
 def make_coffe(machine_resource, flavors, money):
     price = {"espresso": 1.2,
@@ -81,6 +71,7 @@ def make_coffe(machine_resource, flavors, money):
         return make_coffe(machine_resource, flavors, money)
 
 print(make_coffe(machine_resource, flavors, 0))
+
 
 
 
